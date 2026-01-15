@@ -1,32 +1,31 @@
 {
   "rewrites": [
+    { "source": "/AboutUs", "destination": "/aboutus" },
+    { "source": "/Changelogs", "destination": "/changelogs" },
+    { "source": "/Guide", "destination": "/guide" },
+    { "source": "/FAQ", "destination": "/faq" },
+    { "source": "/Resources", "destination": "/resources" },
+    { "source": "/USC", "destination": "/usc" },
+    { "source": "/Troubleshooting", "destination": "/troubleshooting" }
+  ],
+  "headers": [
     {
-      "source": "/AboutUs",
-      "destination": "/aboutus"
+      "source": "/(.*)\\.(js|css|map|woff2?|ttf|eot)$",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     },
     {
-      "source": "/Changelogs",
-      "destination": "/changelogs"
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg|ico)$",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ]
     },
     {
-      "source": "/Guide",
-      "destination": "/guide"
-    },
-    {
-      "source": "/FAQ",
-      "destination": "/faq"
-    },
-    {
-      "source": "/Resources",
-      "destination": "/resources"
-    },
-    {
-      "source": "/USC",
-      "destination": "/usc"
-    },
-    {
-      "source": "/Troubleshooting",
-      "destination": "/troubleshooting"
+      "source": "/(.*)\\.html$",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
     }
   ]
 }
