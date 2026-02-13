@@ -77,4 +77,5 @@ If you are having connection issues, please refer to the FAQ as that covers Tech
 <td><a href="/Troubleshooting.html" style="color:#f0b6d5"><b>Troubleshooting</b></a></td>
 <td>Running into issues?</td>
 </tr>
+
 </table>
